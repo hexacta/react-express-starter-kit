@@ -1,0 +1,36 @@
+{
+  "name": "react-express-starter-kit-server",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon src --exec babel-node",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "babel src -d dist"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "compression": "^1.5.2",
+    "cors": "^2.7.1",
+    "express": "^4.13.3",
+    "morgan": "^1.8.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-preset-env": "^1.1.8",
+    "nodemon": "^1.9.2",
+    "rimraf": "^2.6.1"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  }
+}

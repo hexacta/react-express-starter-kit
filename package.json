@@ -1,0 +1,17 @@
+{
+  "name": "react-express-starterkit",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+		"postinstall": "run-s install:server install:web",
+		"install:server": "cd server && npm install",
+		"install:web": "cd web && npm install",
+
+    "start": "run-p start:server start:web",
+    "start:server": "npm start --prefix server",
+    "start:web": "npm start --prefix web"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.0.2"
+  }
+}
