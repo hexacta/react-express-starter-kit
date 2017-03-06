@@ -34,6 +34,17 @@ The React application is fully contained inside the `web` folder. It is the bare
 	"proxy": "http://localhost:8080/"
 ```
 
+Aaaand, an example of how to use fetch to call the API:
+```js
+  handleClick = async e => {
+    const response = await fetch("api/books/");
+    const books = await response.json();
+    this.setState({
+      books: books
+    })
+  };
+```
+
 ### Express
 The `server` folder includes:
 - A REST API shell with Express
